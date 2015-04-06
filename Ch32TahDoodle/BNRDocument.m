@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         // Add your subclass-specific initialization here.
-        // Test comment
+        // Test comment 2
     }
     return self;
 }
