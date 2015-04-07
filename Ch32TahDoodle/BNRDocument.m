@@ -60,7 +60,16 @@
 
 - (void)addTask:(id)sender
 {
-    NSLog(@"Add Task button clicked!");
+    //    NSLog(@"Add Task button clicked!");
+    if (!self.tasks) {
+        self.tasks = [NSMutableArray array];
+    }
+    
+    [self.tasks addObject:@"New Item"];
+    
+    [self.taskTable reloadData];
+    
+    [self updateChangeCount:NSChangeDone];
 }
 
 
