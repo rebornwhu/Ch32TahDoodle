@@ -63,4 +63,28 @@
     NSLog(@"Add Task button clicked!");
 }
 
+
+#pragma mark - Data Source Methods
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tv
+{
+    return [self.tasks count];
+}
+
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    return [self.tasks objectAtIndex:row];
+}
+
+
+- (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    [self.tasks replaceObjectAtIndex:row withObject:object];
+    [self updateChangeCount:NSChangeDone];
+}
+
+
+
+
 @end
