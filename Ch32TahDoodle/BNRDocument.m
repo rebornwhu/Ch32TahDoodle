@@ -86,6 +86,16 @@
     [self updateChangeCount:NSChangeDone];
 }
 
+- (void)deleteTask:(id)sender
+{
+    if (!self.tasks
+        || [self.tasks count] == 0) {
+        return;
+    }
+    
+//   [self.tasks ]
+}
+
 
 #pragma mark - Data Source Methods
 
