@@ -93,7 +93,13 @@
         return;
     }
     
-//   [self.tasks ]
+    NSInteger selectedRow = [self.taskTable selectedRow];
+    
+    [self.tasks removeObjectAtIndex:selectedRow];
+    
+    [self.taskTable reloadData];
+    
+    [self updateChangeCount:NSChangeDone];
 }
 
 
